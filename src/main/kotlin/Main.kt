@@ -66,8 +66,24 @@ fun main() {
     println(superify(superify("michael")))
     println(superify(superify(superify(superify("cat")))))
 
+    // Define a function revealSecret which takes a passcode in argument, and returns a secret string
+    // "The cookies are in the desk drawer" only if the given passcode is the string "HUNGRY".
+    //If the given passcode is something else, the function should return null.
+    //You will need to use an if statement to implement this function.
+    //
+    //val secret = revealSecret("HUNGRY")
+    //println(secret) // "The cookies are in the desk drawer"
+    //
+    //val secret = revealSecret("Hi")
+    //println(secret) // null
 
-
-
-
+    fun revealSecret( password: String ): String? {
+        return if (password == "HUNGRY") {
+            "The cookies are in the desk drawer"
+        } else {
+            null
+        }
+    }
+    println(revealSecret("HUNGRY"))
+    println(revealSecret("food please"))
 }
