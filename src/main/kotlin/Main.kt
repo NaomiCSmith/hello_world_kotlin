@@ -108,4 +108,21 @@ fun main() {
     println(getNumberSign(0))
 
 
+    // Define a function printHelloMessages which, for each name in the list given in argument,
+    // prints a hello message. You should use map in this function.
+
+    fun printHelloMessages (names: List<String>) {
+        names.map {println("Hello ${it}!")}
+    }
+    printHelloMessages(listOf("Naomi", "Michael", "Lucina"))
+
+
+    // Use the function getNumberSign written in the previous section. Write a new function getAllNumberSigns
+    // which takes an array of numbers (Int), and returns an array of the corresponding number signs.
+
+
+
+
+
+
 }
