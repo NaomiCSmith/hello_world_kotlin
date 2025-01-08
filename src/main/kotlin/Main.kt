@@ -128,4 +128,19 @@ fun main() {
     println(getAllNumberSigns(listOf(6, -5, 0, 4, -2)))
 
 
+    // Function that uses a function as an argument:
+
+    fun calculate(a: Int, b: Int, calculateFunction: (Int, Int) -> Int): Int {
+        return calculateFunction(a, b)
+    }
+    fun add(a: Int, b: Int): Int {
+        return a + b
+    }
+    fun multiply(a: Int, b: Int): Int {
+        return a * b
+    }
+
+    println(calculate(2, 3, ::add)) // 2 + 3 = 5
+    println(calculate(2, 4, ::multiply)) // 2 * 4 = 8
+
 }
