@@ -174,4 +174,12 @@ fun main() {
     println(greetWith("I am going on holiday", ::exclaim))
 
 
+    // Using a lambda with greetWith instead of calling a function as argument:
+
+    // lambda instead of exclaim:
+    println(greetWith("I want to go to bed now", {string -> "${string}!"}))
+
+    //lambda instead of convertToCaps:
+    println(greetWith("I am ready for second breakfast.", {string -> string.uppercase()}))
+
 }
