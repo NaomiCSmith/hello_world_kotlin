@@ -120,9 +120,12 @@ fun main() {
     // Use the function getNumberSign written in the previous section. Write a new function getAllNumberSigns
     // which takes an array of numbers (Int), and returns an array of the corresponding number signs.
 
+    fun getAllNumberSigns(numbers : List<Int>): List<String> {
+        return numbers.map{getNumberSign(it)}
+    }
 
-
-
+    println(getAllNumberSigns(listOf(-1, 3, -5, 0, 7)))
+    println(getAllNumberSigns(listOf(6, -5, 0, 4, -2)))
 
 
 }
