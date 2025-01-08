@@ -86,4 +86,26 @@ fun main() {
     }
     println(revealSecret("HUNGRY"))
     println(revealSecret("food please"))
+
+    // Define a function getNumberSign that takes a number and returns a String which is either "zero",
+    // "positive" or "negative" depending on its sign. If the argument is not a number, the function
+    // should return null.
+
+    fun getNumberSign (number: Int): String {
+        val result =
+            if (number < 0) {
+                "negative"
+            } else if (number > 0) {
+                "positive"
+            } else {
+                "zero"
+            }
+        return result
+    }
+
+    println(getNumberSign(1))
+    println(getNumberSign(-3))
+    println(getNumberSign(0))
+
+
 }
