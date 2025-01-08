@@ -143,4 +143,35 @@ fun main() {
     println(calculate(2, 3, ::add)) // 2 + 3 = 5
     println(calculate(2, 4, ::multiply)) // 2 * 4 = 8
 
+
+    // Implement a function convertToCaps which takes a string and returns the string converted to capital letters.
+
+    fun convertToCaps(string: String): String {
+        return string.uppercase()
+    }
+
+    println(convertToCaps("Hello World!"))
+
+
+    // Implement a function exclaim which takes a string and returns the given string with an exclamation mark at the end.
+
+    fun exclaim(string: String): String{
+        return "${string}!"
+    }
+
+    println(exclaim("Hello World"))
+
+
+    // Implement a function greetWith which we can call this way:
+    //greetWith("Marco", convertToCaps) // "MARCO"
+    //greetWith("Marco", exclaim) // "Marco!"
+
+    fun greetWith(string: String, adapt: (String) -> String): String {
+        return adapt(string)
+    }
+
+    println(greetWith("I am tired", ::convertToCaps))
+    println(greetWith("I am going on holiday", ::exclaim))
+
+
 }
