@@ -182,4 +182,24 @@ fun main() {
     //lambda instead of convertToCaps:
     println(greetWith("I am ready for second breakfast.", {string -> string.uppercase()}))
 
+
+    // using class Item and ShoppingBasket with example items
+
+    val item = Item("Mars", 4.99)
+
+    println(item.name) // 'Mars'
+    println(item.price) // 4.99
+
+    val cart = ShoppingBasket()
+    println(cart.getTotalPrice()) // 0.0
+
+    cart.addItem(item)
+
+    println(cart.getTotalPrice()) // 4.99
+
+    cart.addItem(Item("Skittle", 3.99))
+    cart.addItem(Item("Skittle", 3.99))
+
+    println(cart.getTotalPrice())
+
 }
